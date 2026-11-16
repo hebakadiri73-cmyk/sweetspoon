@@ -1,0 +1,363 @@
+<doctype html >
+<html>
+<head>
+<title> Sweetspoon</title>
+<style>
+* {
+    box-sizing: border-box;
+}
+body{
+background-color: rgb(0, 0, 0);
+margin: 0;
+}
+.logo{
+height: 60px;
+width: 270px;
+
+}
+header{
+position: fixed;
+background-color: black;
+color: antiquewhite;
+display: flex;
+gap: 30px;
+top:0;
+left: 0;
+width:100%;
+z-index: 10;
+justify-content: space-around;
+align-items: center;
+font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+ }
+ @media screen and (max-width: 600px) {
+    header {
+        position: relative;
+        flex-wrap: wrap;
+        gap: 15px;
+        padding: 10px;
+        justify-content: center;
+    }
+.logo {
+        width: 150px;
+        height: auto;
+    }
+ header a {
+        font-size: 13px;
+    }
+}
+a{
+color: antiquewhite;
+text-decoration: none;
+ }
+a:hover {
+text-decoration: underline;
+color: pink;
+ }  
+ nav {
+    position: relative;
+    width: 100%;
+    height: 600px;
+    display: flex;
+    justify-content: flex-end;
+    align-items:center;
+ padding-right: 8%;
+    overflow: hidden;
+}
+@media screen and (max-width: 600px) {
+    nav {
+        height: 450px;
+        justify-content: center;
+        padding: 15px;
+    }
+    .ecriture {
+        padding: 15px;
+        width: 90%;
+    }
+    h1 {
+        font-size: 30px;
+    }
+    h2 {
+        font-size: 21px;
+    }
+    .ecriture h3 {
+        font-size: 16px;
+    }
+}
+.photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    
+}
+
+.ecriture {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 30px;
+    border-radius: 10px;
+}
+
+ .photo:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 35px rgba(219,112,147,0.5);
+}
+h1{
+color: rgb(201, 134, 162);
+font-size: 45px;
+ }
+h2{
+color: white;
+font-size: 29px;
+ } 
+ .ecriture h3 {
+    font-size: 21px;
+}
+h3, p,h4{
+color: rgb(224, 212, 212);
+ }
+button {
+background-color: palevioletred;
+color: black;
+height: 50px;
+padding: 0 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+ }
+button a{
+background-color: palevioletred;
+color: black;
+text-decoration: none;
+ }
+ button:hover {
+    background-color: pink;
+    transform: translateY(-4px);
+    box-shadow: 0 5px 15px rgba(219,112,147,0.4);
+}
+.decoration {
+display: flex;
+align-items: center;
+justify-content: center;
+gap: 15px;
+  margin: 20px 0 35px;
+}
+.decoration span {
+ width: 100px;
+height: 2px;
+background-color: pink;
+}
+.decoration p {
+color: pink;
+font-size: 25px;
+margin: 0;
+}
+.photos {
+object-fit: cover;
+display: flex;
+gap: 20px;
+width: 80px;
+height: 80px;
+
+}
+.pr{
+text-align: center;
+width: 200px;
+}
+.pr img{
+ object-fit: cover;
+width: 200px;
+height: 180px;
+display: block;
+}
+.pr button{
+padding: 8px 12px;
+font-size: 14px;
+cursor: pointer;
+}
+.carte img{
+width: 200px;
+height: 200px;
+}
+.produits {
+display: flex;
+justify-content: center;
+gap: 5px;
+flex-wrap: wrap;
+ padding: 0 20px 45px;
+}
+.carte {
+ width:350px;
+ padding: 15px;
+    border: 1px solid rgba(255,192,203,0.25);
+    border-radius: 10px;
+    text-align: center;
+text-align: center;
+}
+section p{
+color: rgb(0, 0, 0);
+}
+.qualites {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 20px;
+    padding: 55px 30px;
+    background-color: #fff7f5;
+    flex-wrap: wrap;
+}
+.qualite {
+    background-color: white;
+    width: 23%;
+    padding: 30px 15px;
+    text-align: center;
+    border: 1px solid #f3d1d5;
+    border-radius: 18px;
+    box-shadow: 0 5px 18px rgba(180, 100, 120, 0.10);
+}
+
+.qualite:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(180, 100, 120, 0.20);
+}
+.qualite span {
+    font-size: 42px;
+    display: block;
+    margin-bottom: 15px;
+}
+.qualite p {
+    color: #681640;
+    font-size:20px;
+}
+@media screen and (max-width: 600px) {
+    .qualite {
+        width: 100%;
+    }
+}
+.qualites h2 {
+    width: 100%;
+    text-align: center;
+    color: #68172f;
+    font-size: 28px;
+}
+footer {
+display: flex;
+gap: 80px;
+align-items: center;
+}
+footer a {
+text-decoration: none;
+color: rgb(101, 80, 80);
+font-size: 16px;
+}
+@media screen and (max-width: 600px) {
+    footer {
+        flex-direction: column;
+        gap: 20px;
+        padding: 25px;
+        text-align: center;
+    }
+    footer .logo {
+        width: 160px;
+    }
+    footer a {
+        font-size: 14px;
+    }
+}
+</style>
+</head>
+<body >
+<header>
+<img src="Images/logo.jpeg" alt="logo" class="logo">
+<a href="sweetspoon.html">accueil</a>
+<a href="#Nos produits">Nos produits</a>
+<a href="panier.html">panier</a>
+<a href="#footer">informations</a>
+<a href="formulaire4.html">contact us</a>
+</header>
+<nav>
+<img src="Images/sweet spoon.webp" alt="photo" class="photo";>
+<div class="ecriture">
+<h1>Sweet Spoon</h1>
+<h2>Le plaisir à chaque cuillère</h2>
+<h3>Des desserts préparés avec amour</h3>
+<button><a href="produits"> découvrir nos desserts </a></button></div>
+</nav>
+<main>
+<div class="decoration"   id="Nos produits">
+<span></span>
+<p> Nos produits ♡</p>
+<span></span>
+</div>
+<div class="produits">
+<div class="carte">
+<img src="Images/framboise.webp" alt="tiramissu">
+<h3>cup framboise </h3>
+<h4>25 DH</h4>
+<button><a href="panier.html">🛒 Ajouter au panier </a></button>
+</div>
+<div class="carte">
+<img src="Images/kunafa.jpeg" alt="tiramissu">
+<h3> kunafa pistache </h3>
+<h4>25 DH</h4>
+<button><a href="panier.html">🛒 Ajouter au panier </a></button>
+</div>
+<div class="carte">
+<img src="Images/lotus.jpeg" alt="lotus">
+<h3>tiramissu lotus</h3>
+<h4>15 DH</h4>
+<button><a href="panier.html">🛒 Ajouter au panier </a></button>
+</div>
+<div class="carte">
+<img src="Images/mangue.jpeg" alt="cup">
+<h3>cup mangue </h3>
+<h4>25 DH</h4>
+<button><a href="panier.html">🛒 Ajouter au panier </a></button>
+</div>
+<div class="carte">
+<img src="Images/oreo.jpeg" alt="oreo">
+<h3>cup oreo</h3>
+ <h4>25 DH</h4>
+ <button><a href="panier.html">🛒 Ajouter au panier </a></button>
+</div>
+</div>
+<section >
+<div class="qualites">
+    <h2>Pourquoi choisir Sweet Spoon ? ♡</h2>
+ <div class="qualite">
+ <span>🚚</span>
+ <p>Livraison Rapide</p>
+</div>
+ <div class="qualite">
+  <span>💳</span>
+ <p>Paiement sécurisé</p>
+ </div>
+<div class="qualite">
+ <span>💎</span>
+<p>ingrédients de qualité</p>
+ </div>
+<div class="qualite">
+    <span>👥</span>
+ <p>équipe passionné à votre service</p>
+</div>
+</div>
+</section>
+<section class="panier">
+<div></div>
+</section>
+</main>
+<footer id="footer">
+<img src="Images/logo.jpeg" alt="logo" class="logo">
+<a href="https://www.instagram.com/sweet_spoon.1?xtok=MWMzeHJvbjRvcTI3Mw=="> Instagram</a>
+<a href="https://www.tiktok.com/@sweet_spoon.1?_r=1&_t=ZS-9BQw8wONWnY">TikTok</a>
+<a href=""> Contact</a>
+</div>
+</footer>

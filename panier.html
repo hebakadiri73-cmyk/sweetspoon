@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Notre Panier </title>
+<style>
+
+
+body {
+  background:#FFF8F0;
+  padding:20px;
+}
+
+.panier {
+  max-width:600px;
+  margin: 20%;
+  background:white;
+  padding:25px;
+  border-radius:15px;
+  border:1px solid #e8d5c4;
+  box-shadow:0 4px 15px rgba(0,0,0,0.08);
+}
+
+.panier  {
+  text-align:center;
+  color:#3b2314;
+  margin-bottom:20px;
+}
+.item {
+  display:flex;
+  align-items:center;
+  gap:15px;
+  border-bottom:1px solid #eee;
+  padding:15px 0;
+}
+.item img {
+  width:90px;
+  height:90px;
+  border-radius:10px;
+  object-fit:cover;
+}
+.info b {
+  color:#3b2314;
+  
+}
+.info span {
+  color:#888;
+  font-size:13px;
+}
+.quantite {
+  display:flex;
+  align-items:center;
+  gap:5px;
+}
+.quantite input {
+  width:45px;
+  text-align:center;
+  padding:6px;
+  border:1px solid #ddd;
+  border-radius:8px;
+}
+.quantite a {
+  text-decoration:none;
+  background:#f0e6dc;
+  width:28px;
+  height:28px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:50%;
+  color:#3b2314;
+  font-weight:bold;
+}
+
+/* SUPPRIMER */
+.supprimer {
+  color:red;
+  text-decoration:none;
+  font-size:13px;
+}
+
+/* TOTAL */
+.total-box {
+  display:flex;
+  justify-content:space-between;
+  padding:20px 0;
+  font-size:18px;
+  font-weight:bold;
+  color:#3b2314;
+}
+
+.total-box span:last-child {
+  color:#b08968;
+}
+
+.btns {
+  display:flex;
+  gap:10px;
+}
+
+.btns a {
+  flex:1;
+  text-align:center;
+  text-decoration:none;
+  padding:13px;
+  border-radius:25px;
+  font-size:15px;
+}
+
+.continuer {
+  background:white;
+  border:1.5px solid #3b2314;
+  color:#3b2314;
+}
+
+.commander {
+  background:#3b2314;
+  color:white;
+}
+
+
+
+@media (max-width:600px) {
+  .item {
+    flex-wrap:wrap;
+  }
+ 
+}
+
+
+</style>
+</head>
+<body>
+
+<div class="panier">
+  <h2>🛒 Panier</h2>
+
+  <div class="item">
+    <img src="mangue.jpeg" alt="Tiramisu">
+    <div class="info">
+      <b>Cup mangue</b>
+      <span>25 DH / pièce</span><br>
+      <p>❌ Supprimer</p>
+    </div>
+    <div class="quantite">
+      <input type="number" id="quant" name="quant" min="0" max="100" step="1" value="0">
+    </div>
+    
+  </div>
+
+
+  <div class="item">
+    <img src="oreo.jpeg" alt="Tiramisu">
+    <div class="info">
+      <b>Cup oreo</b>
+      <span>25 DH / pièce</span><br>
+      <a href="#" class="supprimer">❌ Supprimer</a>
+    </div>
+    <div class="quantite">
+      <input type="number" id="quant" name="quant" min="0" max="100" step="1" value="0">
+    </div>
+  </div>
+  <div class="total-box">
+    <span>Total :</span>
+    <span>145 DH</span>
+  </div>
+
+  <div class="btns">
+    <a href="sweetspoon.html" class="continuer">← Continuer mes achats</a>
+    <a href="formulaire4.html" class="commander">Commander →</a>
+  </div>
+
+  <p class="vide">Livraison : 20 DH à Casablanca - Gratuite dès 200 DH</p>
+</div>
+
+</body>
+</html>

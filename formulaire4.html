@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Commander </title>
+<style>
+* {  
+  padding:0; 
+  box-sizing:border-box; 
+
+}
+.form-box { 
+  max-width:500px; 
+  margin: 15%; 
+  background:white; 
+  padding:30px; 
+  border-radius:15px; 
+  border:1px solid #e8d5c4; 
+  box-shadow: 2px 4px 10px ;
+  
+}
+.form-box h2 { 
+  text-align:center; 
+  color:#420d26; 
+  margin-bottom:5px; 
+}
+
+.form-box p { 
+  text-align:center; 
+  color:#888; 
+  margin-bottom:25px; 
+  font-size:14px; 
+}
+
+label { 
+  display:block; 
+  margin-bottom:6px; 
+  font-weight:bold; 
+  color:#42172b; 
+  font-size:14px; 
+}
+
+input, textarea, select { 
+  width:100%; 
+  padding:12px; 
+  margin-bottom:18px; 
+  border:1.5px solid #ddd; 
+  border-radius:10px; 
+  font-size:15px; 
+  background:#FFF8F0; 
+}
+
+input:focus, textarea:focus, select:focus { 
+  border-color:#b08968; 
+  outline:none; 
+  background:white; 
+}
+
+.row { 
+  display:flex; 
+  gap:12px; 
+}
+
+.row > div { 
+  flex:1; 
+}
+
+button { 
+  width:100%; 
+  background:#421030; 
+  color:white; 
+  border:none; 
+  padding:14px; 
+  font-size:17px; 
+  border-radius:25px; 
+  cursor:pointer; 
+}
+h2{ 
+  font-size: larger;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+@media (max-width:600px) {
+  .row { 
+    flex-direction:column; 
+  }
+  .form-box { 
+    padding:20px; 
+    margin:10px; 
+  }
+}
+
+
+
+</style>
+</head>
+<body>
+
+<div class="form-box">
+  <h2>🍰 Commander Maintenant</h2>
+  <p>Remplissez le formulaire pour votre commande</p>
+
+  <form>
+
+    <div class="row">
+      <div>
+        <label>Prénom et nom:</label>
+        <input type="text">
+      </div>
+      
+    </div>
+
+    
+    <label>Numéro de Téléphone :</label>
+    <input required type="tel">
+
+    
+    <label>Adresse Complète :</label>
+    <textarea rows="3" required ></textarea>
+
+    
+    <label>Ville :</label>
+    <select required>
+      <option value="">Choisissez votre ville</option>
+      <option>Casablanca</option>
+      <option>Rabat</option>
+    </select>
+
+    <label >Que voulez-vous ?</label>
+     <select id="country" name="country">
+         <optgroup label="Tiramissu">
+     <option value="café">Café</option>
+      <option value="lotus">lotus</option> 
+        <option value="vanille">vanille</option> 
+    </optgroup> 
+    <optgroup label="Cup">
+         <option value="mangue">Mangue</option>
+          <option value="oreo">oreo</option>
+           <option value="pause">pause</option> 
+        </optgroup> </select>
+
+    <button type="submit">Confirmer la Commande ✅</button>
+  </form>
+</div>
+
+</body>
+</html>
